@@ -16,3 +16,12 @@ Docs: https://docs.djangoproject.com/en/5.1/
 - `python manage.py createsuperuser`
 - `python manage.py runserver`
 - Search localhost:8000/admin
+
+# Create app
+
+- `python manage.py startapp <app>`
+
+# Migrations of app
+
+- `python manage.py makemigrations`
+- `python manage.py migrate`
