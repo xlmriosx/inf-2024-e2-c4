@@ -1,0 +1,21 @@
+<title>{{ title }}</title>
+{% if personas_list %}  <!-- Si existe algun dato en personas_list hace lo de abajo -->
+    <h1>Existen personas en personas_list</h1>
+    <h3>Son las siguientes:</h3>
+    <table style="border: 3px solid black; border-radius: 20px;">
+        <tr style="border: 3px solid black" >
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Fecha de alta</th>
+        </tr>
+    {% for persona_element in personas_list %}
+        <tr style="border: 3px solid black">
+            <td style="border: 3px solid black">{{ persona_element.nombre }}</td>
+            <td style="border: 3px solid black">{{ persona_element.apellido }}</td>
+            <td style="border: 3px solid black">{{ persona_element.fecha_nacimiento }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <h1>No EXISTEN perosnas en personas_list</h1>
+{% endif %}
