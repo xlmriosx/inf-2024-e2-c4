@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MI WEB| {% block titulo %}{% endblock titulo %}</title>
+</head>
+
+
+<body class="contenedor">
+
+	<div class="centrar">
+		<img src="{% static 'img/logo.png' %}" width="50px" height="50px">
+		<a href="{% url 'home' %}">IR AL HOME</a>
+		<a href="{% url 'personas_list' %}">IR personas_list</a>
+		<a href="{% url 'personas_template' %}">IR personas_template</a>
+	</div>
+
+	<div class="bloque">
+	{% block contenido %}
+	
+	{% endblock contenido %}
+	</div>
+</body>
+</html>

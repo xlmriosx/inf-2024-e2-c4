@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}LISTAS DE PERSONAS{% endblock titulo %}
+
+{% block contenido %}
+
+    <link rel="stylesheet" href="{% static 'votos/style.css' %}">
+    <title>{{ title }}</title>
+    {% if personas_list %}  <!-- Si existe algun dato en personas_list hace lo de abajo -->
+        <h1>Existen personas en personas_list</h1>
+        <h3>Son las siguientes:</h3>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Fecha de alta</th>
+            </tr>
+        {% for persona_element in personas_list %}
+            <tr>
+                <td>{{ persona_element.nombre }}</td>
+                <td>{{ persona_element.apellido }}</td>
+                <td>{{ persona_element.fecha_nacimiento }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    {% else %}
+        <h1>No EXISTEN perosnas en personas_list</h1>
+    {% endif %}
+
+{% endblock contenido %}
