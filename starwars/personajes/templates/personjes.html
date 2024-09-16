@@ -1,0 +1,14 @@
+<h1>Personajes cargados</h1>
+<ul>
+    {% if personajes_list %}
+        {% for personaje in personajes_list %}
+        <div class="card-personaje">
+            <h3>Alias: {{ personaje.alias }}</h3>
+            <h4>Casa: {{ personaje.casa }}</h4>
+            <img src="{{ personaje.foto.url }}" alt="Img" width="250"/>
+        </div>
+        {% endfor %}
+    {% else %}
+        <h1>No existen personajes cargados!</h1>
+    {% endif %}
+</ul>
