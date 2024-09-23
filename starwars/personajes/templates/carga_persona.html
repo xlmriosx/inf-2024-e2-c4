@@ -1,0 +1,6 @@
+<form method="POST" action="" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Enviar formulario</button>
+</form>
+<h4>{{ mensaje }}</h4>

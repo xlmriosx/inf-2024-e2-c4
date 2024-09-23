@@ -1,0 +1,7 @@
+<h2>Usted desea eliminar a {{ personaje.nombre_completo }}?</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Si, eliminar</button>
+    <a href="{% url 'pj:personajes' %}">No, volver al inicio</a>
+</form>
